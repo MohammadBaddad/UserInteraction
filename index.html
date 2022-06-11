@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HCI - User interaction activity</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, maximum-scale=1">
+    <meta name="og:url" content="http://greenstick.github.io/interactor/">
+    <meta name="og:title" content="HCI - User interaction activity">
+    <meta name="og:description" content="An interactive example of the Interactor.js utility's data model.">
+    <meta name="og:image"
+        content="https://avatars2.githubusercontent.com/u/4184092?v=3&amp;u=563b1abca3308334b6e308ffe0a22507b22cd4a4&amp;s=400">
+    <link href="./style.css" rel="stylesheet" />
+  
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>HCI - User interaction activity</h1>
+        </header>
+        <div class="menu-actions-container">
+            <div class="actions">
+                <div class="interactions">
+                    <div class="title">
+                     Menu 
+                    </div>
+                    <div class="interaction-buttons">
+                        <a class="interaction">الصفحة الرئيسية</a>
+                        <div class="interaction">دورات تدريبية</div>
+                        <div class="interaction"> تسويق الكتروني</div>
+                        <div class="interaction">الشبكات</div>
+                        <div class="interaction">الصحافة والاعلام</div>
+                        <div class="interaction">البرمجة</div>
+                    </div>
+                </div>
+                <!--<div class="conversions">
+                    <div class="title">
+                        Conversion
+                    </div>
+                    <div class="conversion-buttons">
+                        <div class="conversion">Boogy</div>
+                        <div class="conversion">Cheer</div>
+                        <div class="conversion">Applaud</div>
+                        <div class="conversion">Dance</div>
+                        <div class="conversion">Celebrate</div>
+                        <div class="conversion">Hooray</div>
+                        <div class="conversion">Woot</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="session-actions-container">
+            <div class="session">
+                <div class="title">
+                    Session
+                </div>
+                <div class="session-data">
+                    <div class="page.title">
+                        <span style="font-weight: bold;">Page Title:</span> <span data-bind="text: page.title"></span>
+                    </div>
+                    <div class="page.origin">
+                        <span style="font-weight: bold;">Page Origin:</span> <span data-bind="text: page.origin"></span>
+                    </div>
+                    <div class="page.location">
+                        <span style="font-weight: bold;">Page Location:</span> <span
+                            data-bind="text: page.location"></span>
+                    </div>
+                    <div class="page.href">
+                        <span style="font-weight: bold;">Page HREF:</span> <span data-bind="text: page.href"></span>
+                    </div>
+                    <div class="language">
+                        <span style="font-weight: bold;">Language:</span> <span data-bind="text: language"></span>
+                    </div>
+                    <div class="platform">
+                        <span style="font-weight: bold;">Platform:</span> <span data-bind="text: platform"></span>
+                    </div>
+                    <div class="clientstart.name">
+                        <span style="font-weight: bold;">Client Name on Load:</span> <span
+                            data-bind="text: clientStart.name"></span>
+                    </div>
+                    <div class="clientstart.innerWidth">
+                        <span style="font-weight: bold;">Client Inner Width on Load:</span> <span
+                            data-bind="text: clientStart.innerWidth"></span>
+                    </div>
+                    <div class="clientstart.innerHeight">
+                        <span style="font-weight: bold;">Client Inner Height on Load:</span> <span
+                            data-bind="text: clientStart.innerHeight"></span>
+                    </div>
+                    <div class="clientstart.outerWidth">
+                        <span style="font-weight: bold;">Client Outer Width on Load:</span> <span
+                            data-bind="text: clientStart.outerWidth"></span>
+                    </div>
+                    <div class="clientstart.outerHeight">
+                        <span style="font-weight: bold;">Client Outer Height on Load:</span> <span
+                            data-bind="text: clientStart.outerHeight"></span>
+                    </div>
+                    <div class="loadTime">
+                        <span style="font-weight: bold;">Load Time:</span> <span data-bind="text: loadTime"></span>
+                    </div>
+
+                    <div class="unloadTime">
+                        <span style="font-weight: bold;">Unload Time:</span> <span data-bind="text: unloadTime"></span>*
+                    </div>
+                    <div class="clientend.innerWidth">
+                        <span style="font-weight: bold;">Client Inner Width on Unload:</span> <span
+                            data-bind="text: clientEnd.innerWidth"></span>*
+                    </div>
+                    <div class="clientend.innerHeight">
+                        <span style="font-weight: bold;">Client Inner Height on Unload:</span> <span
+                            data-bind="text: clientEnd.innerHeight"></span>*
+                    </div>
+                    <div class="clientend.outerWidth">
+                        <span style="font-weight: bold;">Client Outer Width on Unload:</span> <span
+                            data-bind="text: clientEnd.outerWidth"></span>*
+                    </div>
+                    <div class="clientend.outerHeight">
+                        <span style="font-weight: bold;">Client Outer Height on Unload:</span> <span
+                            data-bind="text: clientEnd.outerHeight"></span>*
+                    </div>
+                    <h5>*Unload Session Data Simulated on Each Interaction</h5>
+                </div>
+            </div>
+            <div class="history">
+                <div class="title">
+                    History
+                </div>
+                <div class="history-data" data-bind="foreach: interactions.slice(0).reverse()">
+                    <div class="record" data-bind="css: type">
+                        <span style="font-weight: bold;">Type:</span> <span data-bind="text: type"></span>
+                        <span style="font-weight: bold;">Event:</span> <span data-bind="text: event"></span>
+                        <span style="font-weight: bold;">Target Tag:</span> <span data-bind="text: targetTag"></span><br />
+                        <span style="font-weight: bold;">Target Class(es):</span> <span
+                            data-bind="text: targetClasses"></span>
+                        <span style="font-weight: bold;">Content:</span> <span data-bind="text: content"></span><br />
+                        <span style="font-weight: bold;">Datetime:</span> <span data-bind="text: createdAt"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+       
+    </div>
+ 
+    <!-- Include Knockout.js & Mapping Plugin -->
+    <script type="application/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+    <script type="application/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/knockout.mapping/2.4.1/knockout.mapping.min.js"></script>
+    <!-- Include interactor.min.js -->
+    <script type="application/javascript">
+        var Interactor = function (n) { this.__init__(n) }; Interactor.prototype = { __init__: function (n) { var e = this; return e.interactions = "boolean" != typeof n.interactions || n.interactions, e.interactionElement = "string" == typeof n.interactionElement ? n.interactionElement : "interaction", e.interactionEvents = !0 === Array.isArray(n.interactionEvents) ? n.interactionEvents : ["mouseup", "touchend"], e.conversions = "boolean" != typeof n.conversions || n.conversions, e.conversionElement = "string" == typeof n.conversionElement ? n.conversionElement : "conversion", e.conversionEvents = !0 === Array.isArray(n.conversionEvents) ? n.conversionEvents : ["mouseup", "touchend"], e.endpoint = "string" == typeof n.endpoint ? n.endpoint : "/interactions", e.async = "boolean" != typeof n.async || n.async, e.debug = "boolean" != typeof n.debug || n.debug, e.records = [], e.session = {}, e.loadTime = new Date, e.__initializeSession__(), e.__bindEvents__(), e }, __bindEvents__: function () { var n = this; if (!0 === n.interactions) for (e = 0; e < n.interactionEvents.length; e++)document.querySelector("body").addEventListener(n.interactionEvents[e], function (e) { e.stopPropagation(), e.target.classList.value === n.interactionElement && n.__addInteraction__(e, "interaction") }); if (!0 === n.conversions) for (var e = 0; e < n.conversionEvents.length; e++)document.querySelector("body").addEventListener(n.conversionEvents[e], function (e) { e.stopPropagation(), e.target.classList.value === n.conversionElement && n.__addInteraction__(e, "conversion") }); return window.onbeforeunload = function (e) { n.__sendInteractions__() }, n }, __addInteraction__: function (n, e) { var t = this, i = { type: e, event: n.type, targetTag: n.target.nodeName, targetClasses: n.target.className, content: n.target.innerText, clientPosition: { x: n.clientX, y: n.clientY }, screenPosition: { x: n.screenX, y: n.screenY }, createdAt: new Date }; return t.records.push(i), t.debug && (t.__closeSession__(), console.log("Session:\n", t.session)), t }, __initializeSession__: function () { var n = this; return n.session = { loadTime: n.loadTime, unloadTime: new Date, language: window.navigator.language, platform: window.navigator.platform, port: window.location.port, clientStart: { name: window.navigator.appVersion, innerWidth: window.innerWidth, innerHeight: window.innerHeight, outerWidth: window.outerWidth, outerHeight: window.outerHeight }, page: { location: window.location.pathname, href: window.location.href, origin: window.location.origin, title: document.title }, endpoint: n.endpoint }, n }, __closeSession__: function () { var n = this; return n.session.unloadTime = new Date, n.session.interactions = n.records, n.session.clientEnd = { name: window.navigator.appVersion, innerWidth: window.innerWidth, innerHeight: window.innerHeight, outerWidth: window.outerWidth, outerHeight: window.outerHeight }, n }, __sendInteractions__: function () { var n = this, e = new XMLHttpRequest; return n.__closeSession__(), e.open("POST", n.endpoint, n.async), e.setRequestHeader("Content-Type", "application/json; charset=UTF-8"), e.send(JSON.stringify(n.session)), n } };
+    </script>
+    <!-- Demo Script -->
+    <script src="./script.js" type="module" ></script>
+</body>
+
+</html>
